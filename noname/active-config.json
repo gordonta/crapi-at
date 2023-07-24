@@ -17,21 +17,13 @@
       "mappings": [
         {
           "type": "header",
-          "value": "Bearer {{JaneDoe}}",
+          "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW5lLmRvZUBmYWtlLmNvbSIsImlhdCI6MTY5MDE3MTkzMywiZXhwIjoxNjkwMjU4MzMzfQ.POhmxondx2g2SLoPCT_p3D5FSy070I0eCBpx73k82Lrh58IVg8lpPz0Fs6hq6n_kb-aHGjecszgGEciDNCpeGw",
           "key": "Authorization"
         }
       ]
     }
   ],
   "app": {
-    "secrets": [
-      {
-        "name": "JaneDoe",
-        "type": "postman",
-        "data": {
-          "sourceBody": "$.token"
-        }
-      }
-    ]
+    "secrets": []
   }
 }

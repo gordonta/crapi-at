@@ -40,7 +40,7 @@ jobs:
       
       - name: Active Testing Scan
         run: >
-          docker run --analyze
+          docker run 
           --add-host=host.docker.internal:host-gateway 
           -e ACTIVE_CONFIG_FILE_PATH=/noname/active-config.json 
           -v $(pwd)/noname:/noname 
@@ -51,6 +51,7 @@ jobs:
           --test-group-id=${{ secrets.TEST-GROUP-ID }} 
           --branch-name=${{ github. head_ref || github. ref_name }}
           --severity-threshold=none
+          --analyze
   deploy:
     needs: scan 
     runs-on: ubuntu-latest 

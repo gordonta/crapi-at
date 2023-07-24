@@ -21,6 +21,17 @@
           "key": "Authorization"
         }
       ]
+    },
+    {
+      "name": "JohnSmith",
+      "role": "reader / writer",
+      "mappings": [
+        {
+          "type": "header",
+          "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLnNtaXRoQGZha2UuY29tIiwiaWF0IjoxNjkwMTcyNjA0LCJleHAiOjE2OTAyNTkwMDR9.N765qdyspeGWmbDELIlo2Qg7jO5Tjjszmm0aGvraGTJX3jFY-D0IY6aW5s4KsT2Nl1-WriXqRbIXrkKvInrXrg",
+          "key": "Authorization"
+        }
+      ]
     }
   ],
   "app": {

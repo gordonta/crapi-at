@@ -40,7 +40,7 @@ jobs:
       
       - name: Active Testing Scan
         run: >
-          docker run 
+          docker run --analyze
           --add-host=host.docker.internal:host-gateway 
           -e ACTIVE_CONFIG_FILE_PATH=/noname/active-config.json 
           -v $(pwd)/noname:/noname 

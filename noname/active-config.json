@@ -1,10 +1,10 @@
 {
   "version": "1.1.0",
-  "applicationId": "ee5cc239-3b64-4045-ba71-ff40c03a35fd",
+  "applicationId": "7d9f75d3-16dd-4c36-9efa-9d84fdb98ad0",
   "host": "http://host.docker.internal",
   "sources": [
     {
-      "name": "crapi-spec",
+      "name": "crapi",
       "openApi": {
         "sourcePath": "/openapi_specs/crapi-spec.json"
       }
@@ -12,23 +12,12 @@
   ],
   "auths": [
     {
-      "name": "janedoe",
+      "name": "JaneDoe",
       "role": "reader / writer",
       "mappings": [
         {
           "type": "header",
-          "value": "{{janedoe}}",
-          "key": "Authorization"
-        }
-      ]
-    },
-    {
-      "name": "johnsmith",
-      "role": "reader / writer",
-      "mappings": [
-        {
-          "type": "header",
-          "value": "{{johnsmith}}",
+          "value": "Bearer {{JaneDoe}}",
           "key": "Authorization"
         }
       ]
@@ -37,18 +26,10 @@
   "app": {
     "secrets": [
       {
-        "name": "janedoe",
+        "name": "JaneDoe",
         "type": "postman",
         "data": {
-          "sourceInline": "{\"info\":{\"_postman_id\":\"ffd754d0-b698-4f90-99f3-e68542bdcd25\",\"name\":\"johnSmith.postman_collection.json\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20999705\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"john.smith@fake.com\\\",\\n    \\\"password\\\": \\\"crapiNoname!\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"http://host.docker.internal/identity/api/auth/login\",\"protocol\":\"https\",\"host\":[\"host.docker.internal\"],\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
-          "sourceBody": "$.token"
-        }
-      },
-      {
-        "name": "johnsmith",
-        "type": "postman",
-        "data": {
-          "sourceInline": "{\"info\":{\"_postman_id\":\"ffd754d0-b698-4f90-99f3-e68542bdcd25\",\"name\":\"johnSmith.postman_collection.json\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20999705\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"john.smith@fake.com\\\",\\n    \\\"password\\\": \\\"crapiNoname!\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"http://host.docker.internal/identity/api/auth/login\",\"protocol\":\"https\",\"host\":[\"host.docker.internal\"],\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
+          "collection": "{\"info\":{\"_postman_id\":\"ffd754d0-b698-4f90-99f3-e68542bdcd25\",\"name\":\"JaneDoe Login\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20999705\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"jane.doe@fake.com\\\",\\n    \\\"password\\\": \\\"crapiNoname!\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://bola-crapi.nnsworkshop.com/identity/api/auth/login\",\"protocol\":\"https\",\"host\":[\"bola-crapi\",\"nnsworkshop\",\"com\"],\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
           "sourceBody": "$.token"
         }
       }

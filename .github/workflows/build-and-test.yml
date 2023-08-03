@@ -45,7 +45,7 @@ jobs:
           -e ACTIVE_CONFIG_FILE_PATH=/noname/active-config.json 
           -v $(pwd)/noname:/noname 
           -v $(pwd)/openapi-spec:/openapi-spec 
-          jfrog.cicd.nonamesec.com/noname-docker-release/active-cli:2.9.2 scan 
+          jfrog.cicd.nonamesec.com/noname-docker-release/active-cli:$(curl -k ${{github.event.inputs.ACTIVE_API_URL}}/backend/version) scan 
           --api-url=${{ secrets.ACTIVE_API_URL }} 
           --api-token=${{ secrets.ACTIVE_API_TOKEN }} 
           --test-group-id=${{ secrets.TEST_GROUP_ID }} 

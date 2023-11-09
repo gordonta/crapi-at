@@ -1,7 +1,7 @@
 {
   "version": "1.1.0",
   "applicationId": "70152b22-9bf5-4f87-9c3c-c1a172ab1e03",
-  "host": "https://trenttest-crapi.nnsworkshop.com/",
+  "host": "http://host.docker.internal",
   "sources": [
     {
       "name": "crapi-oas",

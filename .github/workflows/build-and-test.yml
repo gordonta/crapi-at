@@ -5,9 +5,9 @@ on:
       - develop
 
 env:
-  ACTIVE_API_URL: "<ACTIVE_API_URL>"
-  ACTIVE_REGISTRY_URL: "<ACTIVE_REGISTRY_URL>"
-  ACTIVE_BACKEND_URI: "<ACTIVE_BACKEND_URI>"
+  ACTIVE_API_URL: "https://cs-internal-env.nonamesec.com/active"
+  ACTIVE_REGISTRY_URL: "us-central1-docker.pkg.dev/noname-artifacts/nns-docker"
+  ACTIVE_BACKEND_URI: "localhost"
 
 jobs:
   scan:
@@ -47,7 +47,7 @@ jobs:
         run: >
           docker run
           --add-host=host.docker.internal:host-gateway
-          -e ACTIVE_CONFIG_FILE_PATH=<PATH_TO_ACTIVE_CONFIG_FILE>
+          -e ACTIVE_CONFIG_FILE_PATH=/noname/active-config.json
           -e ACTIVE_BACKEND_URI=${{ env.ACTIVE_BACKEND_URI }}
           -v $(pwd)/noname:<ACTIVE_CONFIG_FILE_DIR>
           ${{ env.ACTIVE_REGISTRY_URL }}/active-cli:$(curl -k ${{env.ACTIVE_API_URL}}/backend/version) scan

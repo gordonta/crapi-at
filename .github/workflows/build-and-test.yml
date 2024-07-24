@@ -7,7 +7,6 @@ on:
 env:
   ACTIVE_API_URL: "https://cs-internal-env.nonamesec.com/active"
   ACTIVE_REGISTRY_URL: "us-central1-docker.pkg.dev/noname-artifacts/nns-docker"
-  ACTIVE_BACKEND_URI: "localhost"
 
 jobs:
   scan:
@@ -51,7 +50,7 @@ jobs:
           -e ACTIVE_BACKEND_URI=${{ env.ACTIVE_BACKEND_URI }}
           -v $(pwd)/noname:<ACTIVE_CONFIG_FILE_DIR>
           ${{ env.ACTIVE_REGISTRY_URL }}/active-cli:$(curl -k ${{env.ACTIVE_API_URL}}/backend/version) scan
-          --api-url=${{ env.ACTIVE_API_URL }}
+          --api-url=${{ secrets.ACTIVE_API_URL }}
           --api-token=${{ secrets.ACTIVE_API_TOKEN }}
           --test-group-<TEST_GROUP_ID>
           --branch-name=${{ github.head_ref || github.ref_name }}

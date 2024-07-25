@@ -7,7 +7,7 @@ on:
 
 env:
   ACTIVE_API_URL: "https://aigtest.nnsworkshop.com/active"
-  ACTIVE_REGISTRY_URL: "jfrog.cicd.nonamesec.com/noname-docker-release"
+  ACTIVE_REGISTRY_URL: "us-central1-docker.pkg.dev/noname-artifacts/nns-docker"
 
 jobs:
   scan:

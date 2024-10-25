@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  ACTIVE_API_URL: "https://cs-internal-env.nonamesec.com/"
+  ACTIVE_API_URL: "https://bcbsri.nnsworkshop.com/"
   ACTIVE_REGISTRY_URL: "us-central1-docker.pkg.dev/noname-artifacts/nns-docker"
 
 jobs:

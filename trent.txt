@@ -1,4 +1,1 @@
-hello world!!!
-foo
-bar
-<script>doathing</script>
+Test
